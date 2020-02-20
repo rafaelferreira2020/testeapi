@@ -10,7 +10,16 @@ class LoginPage
 
         find('input[name=password').set password
 
+        # robo
+
         click_button 'Acessar sua conta'
+    end
+
+    def robo
+        check = find('#rc-anchor-container div.recaptcha-checkbox-border')
+        if check.visible?
+            check.click
+        end
     end
 
     def alert
