@@ -12,4 +12,8 @@ class LoginPage
 
         click_button 'Acessar sua conta'
     end
+
+    def alert
+        find('#login div.mg-alert-strip').text
+    end
 end
